@@ -69,7 +69,7 @@
   nil)
 
 (define-default-method xpath-protocol:child-pipe ((node stp:document))
-  (filter-children (alexandria:of-type '(not document-type)) node))
+  (filter-children (alexandria:of-type '(not stp:document-type)) node))
 
 (define-default-method xpath-protocol:child-pipe ((node stp:element))
   (normalize-text-nodes! node)
